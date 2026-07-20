@@ -3,7 +3,7 @@
 
   const config = window.JD_LANDING_CONFIG || {};
   const loginUrl = typeof config.appUrl === "string" ? config.appUrl.trim() : "";
-  const formEndpoint = typeof config.formEndpoint === "string" ? config.formEndpoint.trim() : "";
+  const leadEndpoint = typeof config.leadEndpoint === "string" ? config.leadEndpoint.trim() : "";
 
   document.querySelectorAll("[data-login-link]").forEach((link) => {
     link.href = loginUrl || "#";
@@ -89,6 +89,8 @@
   const leadForm = document.querySelector("[data-lead-form]");
   const formStatus = document.querySelector("[data-form-status]");
   const submitButton = document.querySelector("[data-submit-lead]");
+  let pendingRequestId = "";
+  let pendingTimer = 0;
 
   const setFormStatus = (message, type = "") => {
     if (!formStatus) return;
@@ -127,7 +129,46 @@
 
   dialog?.addEventListener("close", () => document.body.classList.remove("dialog-open"));
 
-  leadForm?.addEventListener("submit", async (event) => {
+  const finishSubmission = (message, type) => {
+    window.clearTimeout(pendingTimer);
+    pendingRequestId = "";
+    submitButton.disabled = false;
+    submitButton.textContent = "ส่งข้อมูล";
+    setFormStatus(message, type);
+  };
+
+  const createRequestId = () => {
+    if (window.crypto?.randomUUID) return window.crypto.randomUUID();
+    return `lead-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  };
+
+  const getSubmissionFrame = () => {
+    let frame = document.querySelector("[data-lead-frame]");
+    if (frame) return frame;
+    frame = document.createElement("iframe");
+    frame.name = "jd-lead-submission-frame";
+    frame.title = "ผลการส่งแบบฟอร์มติดต่อ";
+    frame.hidden = true;
+    frame.dataset.leadFrame = "";
+    document.body.appendChild(frame);
+    return frame;
+  };
+
+  window.addEventListener("message", (event) => {
+    const result = event.data;
+    if (!result || result.type !== "JD_LEAD_RESULT" || result.requestId !== pendingRequestId) return;
+
+    if (result.success) {
+      leadForm.reset();
+      finishSubmission("ส่งข้อมูลเรียบร้อยแล้ว ผู้ดูแลระบบจะติดต่อกลับ", "success");
+      window.setTimeout(closeContact, 1800);
+      return;
+    }
+
+    finishSubmission(result.message || "ส่งข้อมูลไม่สำเร็จ กรุณารอสักครู่แล้วลองใหม่", "error");
+  });
+
+  leadForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     setFormStatus("");
 
@@ -144,31 +185,27 @@
       return;
     }
 
-    if (!/^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(formEndpoint)) {
+    if (!/^https:\/\/script\.google\.com\/macros\/s\/[a-zA-Z0-9_-]+\/exec$/.test(leadEndpoint)) {
       setFormStatus("แบบฟอร์มยังอยู่ระหว่างเชื่อมระบบรับข้อมูล กรุณาลองอีกครั้งภายหลัง", "error");
       return;
     }
 
+    const frame = getSubmissionFrame();
+    pendingRequestId = createRequestId();
+    leadForm.elements.namedItem("request_id").value = pendingRequestId;
+    leadForm.elements.namedItem("page_url").value = window.location.href;
+    leadForm.elements.namedItem("user_agent").value = navigator.userAgent;
+    leadForm.action = leadEndpoint;
+    leadForm.method = "POST";
+    leadForm.target = frame.name;
+    leadForm.enctype = "application/x-www-form-urlencoded";
+
     submitButton.disabled = true;
     submitButton.textContent = "กำลังส่ง...";
+    pendingTimer = window.setTimeout(() => {
+      finishSubmission("การส่งข้อมูลใช้เวลานานกว่าปกติ กรุณาลองใหม่อีกครั้ง", "error");
+    }, 25000);
 
-    try {
-      const response = await fetch(formEndpoint, {
-        method: "POST",
-        body: new FormData(leadForm),
-        headers: { "Accept": "application/json" }
-      });
-
-      if (!response.ok) throw new Error("Form submission failed");
-
-      leadForm.reset();
-      setFormStatus("ส่งข้อมูลเรียบร้อยแล้ว ผู้ดูแลระบบจะติดต่อกลับ", "success");
-      window.setTimeout(closeContact, 1800);
-    } catch (error) {
-      setFormStatus("ส่งข้อมูลไม่สำเร็จ กรุณารอสักครู่แล้วลองใหม่", "error");
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "ส่งข้อมูล";
-    }
+    leadForm.submit();
   });
 })();

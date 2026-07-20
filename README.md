@@ -7,18 +7,15 @@ Landing Page สำหรับ JD Builder V3 แยกจากตัว Google
 - `index.html` หน้า Landing Page และแบบฟอร์ม Lead
 - `styles.css` รูปแบบ Responsive และ Animation
 - `app.js` เมนู แท็บ Modal และการส่งแบบฟอร์ม
-- `site-config.js` ลิงก์เข้าสู่ระบบและ Formspree endpoint
+- `site-config.js` ลิงก์เข้าสู่ระบบและ Apps Script Lead API endpoint
 - `privacy.html` นโยบายความเป็นส่วนตัวฉบับย่อ
 - `assets/` ภาพตัวอย่างระบบที่ใช้ข้อมูลจำลอง
 
-## ตั้งค่าแบบฟอร์ม Lead
+## ระบบ Lead
 
-1. สร้างฟอร์มใน Formspree และตั้งอีเมลปลายทางในบัญชี Formspree
-2. เปิด Spam Protection, Restrict to Domain และ Email Notifications
-3. คัดลอก endpoint รูปแบบ `https://formspree.io/f/xxxxxxxx`
-4. ใส่ endpoint ใน `site-config.js`
+แบบฟอร์มติดต่อส่งข้อมูลผ่าน Apps Script Web App ใน `backend/` ไปยัง Google Sheet ของ Admin โดยตรง ระบบตรวจข้อมูลฝั่ง Server, ใช้ honeypot, จำกัดการส่งซ้ำ และป้องกัน Spreadsheet formula injection
 
-อีเมลปลายทางจะไม่ปรากฏในหน้าเว็บหรือ source code ผู้เยี่ยมชมจะเห็นเฉพาะแบบฟอร์มติดต่อ
+ค่าที่เป็นข้อมูลภายในอยู่ใน `backend/PrivateConfig.js` ซึ่งไม่ถูก commit เข้า Public Repo อีเมลปลายทางและ Google Sheet ID จึงไม่ปรากฏในหน้าเว็บหรือ source code สาธารณะ
 
 ## ทดลองในเครื่อง
 

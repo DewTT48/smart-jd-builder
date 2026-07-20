@@ -1,0 +1,5 @@
+.clasp.json
+backend/PrivateConfig.js
+node_modules
+outputs
+tools/build-leads-sheet.mjs
