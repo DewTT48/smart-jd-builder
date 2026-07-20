@@ -30,4 +30,4 @@ python3 -m http.server 4173
 
 ## เผยแพร่
 
-Workflow ใน `.github/workflows/pages.yml` จะเผยแพร่เว็บไซต์อัตโนมัติผ่าน GitHub Pages เมื่อ push เข้า branch `main`
+GitHub Pages เผยแพร่เว็บไซต์จาก root ของ branch `main` โดยตรง ทุกครั้งที่ push การเปลี่ยนแปลง เว็บไซต์จะอัปเดตอัตโนมัติ
