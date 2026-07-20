@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dewtt48.github.io/smart-jd-builder/sitemap.xml
