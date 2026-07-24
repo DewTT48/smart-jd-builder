@@ -829,7 +829,7 @@ img {
 
 .real-comparison {
   display: grid;
-  grid-template-columns: minmax(250px, 0.64fr) 62px minmax(0, 1.5fr);
+  grid-template-columns: minmax(280px, 0.68fr) 78px minmax(0, 1.5fr);
   align-items: stretch;
 }
 
@@ -891,21 +891,45 @@ img {
 }
 
 .real-input-frame {
-  height: 660px;
+  min-height: 660px;
   margin-top: 19px;
-  overflow: auto;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 14px;
+  overflow: hidden;
   border: 1px solid #d6e0ec;
   border-radius: 8px;
   background: #f6f8fb;
-  scrollbar-color: #b9c7d9 transparent;
-  scrollbar-width: thin;
 }
 
-.real-input-frame img {
-  width: auto;
-  max-width: none;
-  height: 100%;
+.input-mockup-label {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.input-mockup-field {
+  padding: 13px 14px;
+  border: 1px solid #d7e1ed;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.input-mockup-field small {
   display: block;
+  margin-bottom: 5px;
+  color: #5d7088;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.input-mockup-field p {
+  margin: 0;
+  color: #20334d;
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .real-input > p {
@@ -946,8 +970,9 @@ img {
 
 .real-flow span {
   padding: 5px 3px;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .real-flow b {
@@ -965,8 +990,9 @@ img {
 .real-flow small {
   padding: 4px 2px;
   color: #718198;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
+  line-height: 1.35;
 }
 
 .real-document {
@@ -2014,7 +2040,7 @@ img {
   }
 
   .real-input-frame {
-    height: 460px;
+    min-height: 0;
   }
 
   .document-scroll {
@@ -2309,7 +2335,7 @@ img {
   }
 
   .real-input-frame {
-    height: 360px;
+    min-height: 0;
   }
 
   .real-flow {
