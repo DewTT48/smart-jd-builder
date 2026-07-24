@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ระบบสร้าง JD อัจฉริยะ ช่วยเปลี่ยนข้อมูลตำแหน่งงานและบริบทธุรกิจให้เป็น Job Description ที่เป็นระบบ พร้อมตรวจ แก้ไข และนำไปใช้งานต่อ">
+  <meta name="description" content="เปลี่ยนข้อมูลตำแหน่งให้เป็น JD ที่พร้อมใช้ ด้วย Workflow ที่เชื่อม Business Context และ Competency พร้อม AI ช่วยร่างและ Human review">
   <meta name="theme-color" content="#f7f8fb">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ระบบสร้าง JD อัจฉริยะ">
-  <meta property="og:description" content="สร้าง ตรวจ และจัดการ Job Description ในพื้นที่ทำงานเดียว">
+  <meta property="og:title" content="JD Builder — เปลี่ยนข้อมูลตำแหน่ง ให้เป็น JD ที่พร้อมใช้">
+  <meta property="og:description" content="สร้าง JD อย่างเป็นระบบ ด้วย AI ที่ HR ยังควบคุมได้">
   <meta property="og:url" content="https://dewtt48.github.io/smart-jd-builder/">
-  <meta property="og:image" content="https://dewtt48.github.io/smart-jd-builder/assets/jd-workspace.png">
-  <title>ระบบสร้าง JD อัจฉริยะ</title>
+  <meta property="og:image" content="https://dewtt48.github.io/smart-jd-builder/assets/og-jd-builder.png">
+  <meta property="og:image:alt" content="JD Builder — เปลี่ยนข้อมูลตำแหน่ง ให้เป็น JD ที่พร้อมใช้">
+  <title>JD Builder — เปลี่ยนข้อมูลตำแหน่ง ให้เป็น JD ที่พร้อมใช้</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fbf'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='white'%3EJD%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="assets/fonts/ibm-plex-sans-thai-thai-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/ibm-plex-sans-thai-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -56,78 +57,109 @@
       <div class="hero-scene" aria-hidden="true">
         <div class="journey-flow">
           <div class="journey-heading">
-            <span>ทำ JD ได้ง่ายใน 4 ขั้นตอน</span>
-            <strong>จากข้อมูลตั้งต้น สู่เอกสารที่พร้อมตรวจ</strong>
+            <span>STRUCTURED JD WORKFLOW</span>
+            <strong>จากข้อมูลตำแหน่ง สู่เอกสารที่พร้อมใช้</strong>
           </div>
           <ol class="journey-list">
             <li class="journey-step journey-step-one">
               <span class="journey-number">1</span>
-              <div><strong>เติมข้อมูล</strong><small>ข้อมูลบริษัทและตำแหน่งงาน</small></div>
+              <div><strong>เก็บข้อมูลตำแหน่ง</strong><small>ข้อมูลต้นทางที่มีโครงสร้าง</small></div>
             </li>
             <li class="journey-step journey-step-two">
               <span class="journey-number">2</span>
-              <div><strong>AI สร้างร่างแรก</strong><small>จัดเนื้อหาให้ครบตามหัวข้อสำคัญ</small></div>
+              <div><strong>เชื่อมบริบทองค์กร</strong><small>Business Context และ Competency</small></div>
             </li>
             <li class="journey-step journey-step-three">
               <span class="journey-number">3</span>
-              <div><strong>ตรวจและปรับ</strong><small>แก้ไขเองหรือสร้างใหม่เฉพาะส่วน</small></div>
+              <div><strong>AI ช่วยสร้างร่าง</strong><small>สร้างใหม่ได้เป็นรายส่วน</small></div>
             </li>
             <li class="journey-step journey-step-four">
               <span class="journey-number">4</span>
-              <div><strong>นำไปใช้งาน</strong><small>ดาวน์โหลดหรือส่งเอกสารต่อ</small></div>
+              <div><strong>HR ตรวจและยืนยัน</strong><small>เลือก แก้ไข และดู Preview</small></div>
             </li>
           </ol>
           <div class="journey-result">
             <span>✓</span>
-            <div><small>ผลลัพธ์</small><strong>JD พร้อมให้คุณตรวจและนำไปใช้</strong></div>
+            <div><small>ผลลัพธ์</small><strong>Google Docs ที่พร้อมแก้ไขและนำไปใช้ต่อ</strong></div>
           </div>
         </div>
       </div>
       <div class="hero-inner">
-        <p class="eyebrow">ระบบสร้าง JD อัจฉริยะ</p>
+        <p class="eyebrow">STRUCTURED JD · SMARTER WORKFLOW</p>
         <h1 id="hero-title">
-          <span class="title-line">สร้าง Job Description</span>
-          <span class="title-line">ที่ชัดเจน พร้อมใช้งาน</span>
-          <span class="title-line title-emphasis">จากข้อมูลที่เป็นระบบ</span>
+          <span class="title-line">เปลี่ยนข้อมูลตำแหน่ง</span>
+          <span class="title-line">ให้เป็น JD</span>
+          <span class="title-line title-emphasis">ที่พร้อมใช้</span>
         </h1>
-        <p class="hero-copy">สร้าง ตรวจ แก้ไข และจัดการ JD ด้วยกระบวนการที่ผสานข้อมูลบริษัทเข้ากับแนวทาง HR ที่ใช้งานได้จริง</p>
+        <p class="hero-copy">สร้าง JD อย่างเป็นระบบ ด้วย AI ที่ HR ยังควบคุมได้ เชื่อมข้อมูลตำแหน่ง Business Context และ Competency ไว้ใน Workflow เดียว</p>
         <div class="hero-actions">
           <a class="button button-primary button-large" data-login-link href="#">เข้าสู่ระบบ</a>
-          <button class="button button-secondary button-large" type="button" data-open-contact>ขอใช้บริการ</button>
+          <button class="button button-secondary button-large" type="button" data-open-contact>ขอ Demo JD Builder</button>
         </div>
-        <p class="access-note"><span aria-hidden="true"></span> ระบบไม่มีการสมัครสมาชิกด้วยตนเอง บัญชีผู้ใช้สร้างโดยผู้ดูแลระบบเท่านั้น</p>
+        <p class="access-note"><span aria-hidden="true"></span> AI ช่วยร่าง — มนุษย์เป็นผู้ตรวจ แก้ไข และตัดสินใจก่อนนำไปใช้</p>
       </div>
       <a class="hero-next" href="#benefits" aria-label="ดูประโยชน์ของระบบ">ดูเพิ่มเติม <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="proof-strip" aria-label="จุดเด่นของ JD Builder">
+      <div class="section-shell proof-grid">
+        <div><strong>Structured input</strong><span>ข้อมูลตำแหน่งชัดเจนตั้งแต่ต้น</span></div>
+        <div><strong>Business aligned</strong><span>เชื่อม Context และ Competency</span></div>
+        <div><strong>Human reviewed</strong><span>HR เลือก ตรวจ แก้ และยืนยัน</span></div>
+        <div><strong>Editable output</strong><span>Preview และ Google Docs ที่แก้ต่อได้</span></div>
+      </div>
     </section>
 
     <section class="section benefit-section" id="benefits" aria-labelledby="benefits-title">
       <div class="section-shell">
         <div class="section-intro reveal">
           <p class="eyebrow">FROM INPUT TO USABLE JD</p>
-          <h2 id="benefits-title">ลดงานที่กระจัดกระจาย<br>ให้เหลือขั้นตอนที่ทุกคนทำตามได้</h2>
-          <p>เหมาะสำหรับ HR ผู้จัดการ และเจ้าของธุรกิจที่ต้องการ JD ซึ่งครบถ้วน อ่านง่าย และพร้อมนำไปตรวจสอบต่อ</p>
+          <h2 id="benefits-title">JD ที่เป็นมาตรฐาน<br>เริ่มจาก Workflow ที่เป็นระบบ</h2>
+          <p>ลดการเริ่มใหม่จากเอกสารเก่าและข้อมูลกระจัดกระจาย พร้อมรักษาบริบทขององค์กรไว้ในทุกตำแหน่ง</p>
         </div>
         <div class="benefit-grid">
           <article class="benefit-item reveal">
             <span class="benefit-number">01</span>
-            <h3>ข้อมูลเป็นระบบตั้งแต่ต้น</h3>
-            <p>รองรับการกรอกทีละตำแหน่งและนำเข้าหลายตำแหน่ง เพื่อจัดคิวทำ JD ตามลำดับงานจริง</p>
+            <h3>Structured from the start</h3>
+            <p>เก็บข้อมูลตำแหน่งด้วยโครงสร้างเดียวกัน รองรับทั้งการกรอกทีละตำแหน่งและ Batch Import</p>
           </article>
           <article class="benefit-item reveal">
             <span class="benefit-number">02</span>
-            <h3>บริบทตรงกับองค์กร</h3>
-            <p>ใช้ข้อมูลบริษัทและความต้องการของตำแหน่งช่วยให้เนื้อหาไม่หลุดจากสภาพธุรกิจ</p>
+            <h3>Built for your context</h3>
+            <p>ใช้ Business Context, Core Competency และ Managerial Competency ขององค์กรประกอบการสร้างร่าง</p>
           </article>
           <article class="benefit-item reveal">
             <span class="benefit-number">03</span>
-            <h3>แก้ไขเป็นรายหัวข้อ</h3>
-            <p>ตรวจร่าง แก้ข้อความ หรือให้ AI ช่วยสร้างเฉพาะส่วน โดยเก็บเวอร์ชันไว้ในพื้นที่เดียว</p>
+            <h3>AI-assisted, human-reviewed</h3>
+            <p>AI ช่วยสร้างเป็นรายส่วน ขณะที่ผู้ใช้ยังเลือก ตรวจ แก้ไข และยืนยันสิ่งที่จะนำไปใช้จริง</p>
           </article>
           <article class="benefit-item reveal">
             <span class="benefit-number">04</span>
-            <h3>พร้อมนำไปใช้งานต่อ</h3>
-            <p>สร้างเอกสาร ดาวน์โหลด และส่งทางอีเมล พร้อมคำแนะนำสำหรับการนำ JD ไปใช้ในงาน HR</p>
+            <h3>Ready to review and reuse</h3>
+            <p>แก้ไขในรูปแบบตาราง ดู Document Preview และสร้าง Google Docs ที่ยังปรับปรุงต่อได้</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section difference-section" aria-labelledby="difference-title">
+      <div class="section-shell difference-layout reveal">
+        <div class="difference-copy">
+          <p class="eyebrow">MORE THAN AI TEXT</p>
+          <h2 id="difference-title">ไม่ใช่แค่ให้ AI<br>เขียนข้อความ</h2>
+          <p>JD Builder ออกแบบมาเพื่อจัดกระบวนการทำ JD ตั้งแต่ข้อมูลต้นทาง ไปจนถึงเอกสารที่ทีม HR ตรวจสอบและนำไปใช้ต่อได้จริง</p>
+        </div>
+        <div class="difference-compare">
+          <div class="compare-item compare-muted">
+            <span>AI ทั่วไป</span>
+            <strong>Prompt → ข้อความ</strong>
+            <p>ได้ร่างเร็ว แต่ผู้ใช้ต้องจัดโครงสร้าง บริบท และรูปแบบเอกสารต่อเอง</p>
+          </div>
+          <div class="compare-item compare-highlight">
+            <span>JD Builder</span>
+            <strong>Input → Context → AI → Review → Docs</strong>
+            <p>ทุกขั้นเชื่อมต่อกัน และ HR ยังควบคุมเนื้อหาก่อนนำไปใช้งาน</p>
+          </div>
         </div>
       </div>
     </section>
@@ -137,46 +169,91 @@
         <div class="product-heading reveal">
           <div>
             <p class="eyebrow">ONE WORKSPACE</p>
-            <h2 id="product-title">ทุกขั้นตอนอยู่ในพื้นที่ทำงานเดียว</h2>
+            <h2 id="product-title">เห็นงานจริง ก่อนสร้างเอกสาร</h2>
           </div>
-          <p>เลือกดูตัวอย่างหน้าจอของระบบ</p>
+          <p>ตัวอย่างหน้าจอเวอร์ชันปัจจุบัน โดยไม่ใช้ข้อมูลส่วนบุคคล</p>
         </div>
 
         <div class="product-tabs reveal" role="tablist" aria-label="ตัวอย่างหน้าจอระบบ">
-          <button id="tab-workspace" role="tab" aria-selected="true" aria-controls="panel-workspace" data-tab="workspace">สร้างและแก้ไข JD</button>
-          <button id="tab-context" role="tab" aria-selected="false" aria-controls="panel-context" data-tab="context" tabindex="-1">ข้อมูลบริษัท</button>
+          <button id="tab-workspace" role="tab" aria-selected="true" aria-controls="panel-workspace" data-tab="workspace">ตัวอย่างเอกสาร</button>
+          <button id="tab-context" role="tab" aria-selected="false" aria-controls="panel-context" data-tab="context" tabindex="-1">Competency องค์กร</button>
           <button id="tab-batch" role="tab" aria-selected="false" aria-controls="panel-batch" data-tab="batch" tabindex="-1">นำเข้าหลายตำแหน่ง</button>
         </div>
 
         <div class="product-stage reveal">
           <div id="panel-workspace" class="product-panel is-active" role="tabpanel" aria-labelledby="tab-workspace" data-panel="workspace">
             <div class="product-copy">
-              <p class="product-kicker">JD WORKSPACE</p>
-              <h3>ตรวจ แก้ไข และสร้างเอกสารจากร่างเดียว</h3>
-              <p>ผู้ใช้ควบคุมทุกขั้นตอนก่อนนำ JD ไปใช้งานจริง และสามารถย้อนกลับมาจัดการเวอร์ชันเดิมได้</p>
+              <p class="product-kicker">DOCUMENT PREVIEW</p>
+              <h3>อ่านง่ายเหมือนเอกสารจริง ก่อนส่งออก</h3>
+              <p>ตรวจโครงสร้าง หัวข้อ และตารางในรูปแบบใกล้เคียง Google Docs ก่อนสร้างเอกสารใช้งาน</p>
             </div>
             <figure class="product-visual">
-              <img src="assets/jd-workspace.png" alt="ตัวอย่างหน้า JD Workspace">
+              <div class="ui-shot ui-document" role="img" aria-label="ตัวอย่าง Document Preview ของตำแหน่ง Account Executive">
+                <div class="ui-window-bar"><span></span><span></span><span></span><strong>Document Preview</strong></div>
+                <div class="ui-paper">
+                  <small>JOB DESCRIPTION</small>
+                  <h4>Account Executive</h4>
+                  <p class="ui-meta">Sales / Business Development · รายงานตรงต่อ Sales Manager</p>
+                  <div class="ui-rule"></div>
+                  <h5>1. วัตถุประสงค์ของตำแหน่ง</h5>
+                  <p>สร้างและรักษาความสัมพันธ์กับลูกค้า นำเสนอโซลูชัน และสนับสนุนเป้าหมายการขายขององค์กร</p>
+                  <h5>3. ความรับผิดชอบหลัก</h5>
+                  <div class="ui-doc-table">
+                    <div class="ui-doc-head"><span>ลำดับ</span><span>ความรับผิดชอบหลัก</span><span>รายละเอียด</span><span>ผลลัพธ์ที่คาดหวัง</span></div>
+                    <div class="ui-doc-row"><span>1</span><span>บริหารเป้าหมายการขาย</span><span>ติดตามโอกาสและข้อมูลลูกค้า</span><span>ยอดขายตามเป้าหมาย</span></div>
+                    <div class="ui-doc-row"><span>2</span><span>ดูแลความสัมพันธ์ลูกค้า</span><span>ประสานงานและติดตามต่อเนื่อง</span><span>ลูกค้าได้รับการดูแล</span></div>
+                  </div>
+                </div>
+              </div>
             </figure>
           </div>
           <div id="panel-context" class="product-panel" role="tabpanel" aria-labelledby="tab-context" data-panel="context" hidden>
             <div class="product-copy">
-              <p class="product-kicker">COMPANY CONTEXT</p>
-              <h3>เพิ่มข้อมูลบริษัทหนึ่งครั้ง ใช้ได้กับทุกตำแหน่ง</h3>
-              <p>ข้อมูลบริษัทถูกแยกตามผู้ใช้ และระบบไม่ส่งชื่อบริษัทให้ AI ประมวลผล</p>
+              <p class="product-kicker">ORGANIZATION COMPETENCY</p>
+              <h3>กำหนดพฤติกรรมร่วมที่ต้องการจากทุกตำแหน่ง</h3>
+              <p>เพิ่มเองหรือให้ AI ช่วยเสนอ Core Competency 1–6 ข้อ แล้วเลือกเฉพาะรายการที่จะใช้จริง</p>
             </div>
             <figure class="product-visual">
-              <img src="assets/company-context.png" alt="ตัวอย่างหน้าข้อมูลบริษัท">
+              <div class="ui-shot ui-competency" role="img" aria-label="ตัวอย่างหน้าจอจัดการ Core Competency ขององค์กร">
+                <div class="ui-window-bar"><span></span><span></span><span></span><strong>Core Competency</strong></div>
+                <div class="ui-competency-head">
+                  <strong>CORE COMPETENCY ขององค์กร</strong>
+                  <em>เลือกใช้ 3 ข้อ</em>
+                </div>
+                <div class="ui-competency-row">
+                  <b>1</b>
+                  <div><small>ชื่อ Competency</small><strong>การคิดเชิงวิพากษ์</strong></div>
+                  <div><small>คำจำกัดความ</small><span>วิเคราะห์ข้อมูลอย่างเป็นกลางและพัฒนาแนวทางแก้ไข</span></div>
+                  <div><small>พฤติกรรมที่คาดหวัง</small><span>ตั้งคำถามเชิงลึกและประเมินมุมมองที่หลากหลาย</span></div>
+                </div>
+                <div class="ui-competency-row">
+                  <b>2</b>
+                  <div><small>ชื่อ Competency</small><strong>การปรับตัวและเรียนรู้ต่อเนื่อง</strong></div>
+                  <div><small>คำจำกัดความ</small><span>เปิดรับการเปลี่ยนแปลงและเรียนรู้สิ่งใหม่</span></div>
+                  <div><small>พฤติกรรมที่คาดหวัง</small><span>นำวิธีการใหม่มาประยุกต์ใช้และเรียนรู้จากข้อผิดพลาด</span></div>
+                </div>
+                <div class="ui-competency-actions"><span class="ui-button">＋ เพิ่มรายการ</span><span class="ui-button">สร้างใหม่ด้วย AI</span><span class="ui-button">ยืนยันรายการที่เลือก</span></div>
+              </div>
             </figure>
           </div>
           <div id="panel-batch" class="product-panel" role="tabpanel" aria-labelledby="tab-batch" data-panel="batch" hidden>
             <div class="product-copy">
               <p class="product-kicker">BATCH IMPORT</p>
-              <h3>เตรียมหลายตำแหน่ง แล้วเลือกทำทีละ JD</h3>
-              <p>ดาวน์โหลดเทมเพลต นำเข้ารายการ และเปิดพื้นที่ทำงานของแต่ละตำแหน่งเมื่อพร้อม</p>
+              <h3>นำเข้าหลายตำแหน่งในจุดเดียว</h3>
+              <p>ดาวน์โหลดเทมเพลต อัปโหลด XLSX, CSV หรือ TSV แล้วเลือกตำแหน่งที่จะเปิดใน Workspace</p>
             </div>
             <figure class="product-visual">
-              <img src="assets/batch-import.png" alt="ตัวอย่างหน้านำเข้าหลายตำแหน่ง">
+              <div class="ui-shot ui-batch" role="img" aria-label="ตัวอย่างหน้าจอนำเข้าหลายตำแหน่ง">
+                <div class="ui-window-bar"><span></span><span></span><span></span><strong>นำเข้าหลายตำแหน่ง</strong></div>
+                <div class="ui-batch-title"><div><small>BATCH IMPORT</small><h4>อัปโหลดข้อมูลหลายตำแหน่ง</h4><p>เลือกไฟล์ที่กรอกจากเทมเพลต แล้วนำข้อมูลเข้าสู่ระบบ</p></div><span class="ui-button">ดาวน์โหลดเทมเพลต</span></div>
+                <div class="ui-upload-actions"><span class="ui-button">เลือกไฟล์</span><span>Position_Template.xlsx</span><span class="ui-button">อัปโหลดไฟล์</span></div>
+                <div class="ui-batch-table">
+                  <div class="ui-batch-head"><span>ตำแหน่ง</span><span>หน่วยงาน</span><span>สถานะ</span><span></span></div>
+                  <div><strong>Marketing Coordinator</strong><span>Marketing</span><em>รอดำเนินการ</em><span class="ui-button">เลือก</span></div>
+                  <div><strong>IT Support Specialist</strong><span>Information Technology</span><em>นำเข้าแล้ว</em><span class="ui-button">เปิด Workspace</span></div>
+                  <div><strong>Finance Officer</strong><span>Finance & Accounting</span><em>รอดำเนินการ</em><span class="ui-button">เลือก</span></div>
+                </div>
+              </div>
             </figure>
           </div>
         </div>
@@ -187,14 +264,14 @@
       <div class="section-shell process-layout">
         <div class="process-copy reveal">
           <p class="eyebrow">A CLEAR PROCESS</p>
-          <h2 id="process-title">จากข้อมูลตำแหน่ง<br>สู่เอกสารที่พร้อมตรวจ</h2>
-          <p>ระบบช่วยจัดกระบวนการ ไม่ได้แทนที่การตัดสินใจของผู้ใช้งาน</p>
+          <h2 id="process-title">จากข้อมูลตำแหน่ง<br>สู่เอกสารที่พร้อมใช้</h2>
+          <p>ระบบช่วยจัดกระบวนการและสร้างร่าง โดยผู้ใช้ยังควบคุมเนื้อหาทุกขั้นตอน</p>
         </div>
         <ol class="process-list">
-          <li class="reveal"><span>1</span><div><h3>เตรียมข้อมูล</h3><p>กรอกข้อมูลบริษัทและตำแหน่ง หรืออัปโหลดจากเทมเพลต</p></div></li>
-          <li class="reveal"><span>2</span><div><h3>สร้างร่าง JD</h3><p>เลือกตำแหน่งและให้ระบบสร้างเนื้อหาตามหัวข้อมาตรฐาน</p></div></li>
-          <li class="reveal"><span>3</span><div><h3>ตรวจและปรับ</h3><p>แก้ไขด้วยตนเองหรือใช้ AI ช่วยสร้างใหม่เฉพาะหัวข้อ</p></div></li>
-          <li class="reveal"><span>4</span><div><h3>นำไปใช้งาน</h3><p>สร้างเอกสาร ดาวน์โหลด ส่งอีเมล และเก็บไว้ในประวัติ</p></div></li>
+          <li class="reveal"><span>1</span><div><h3>รับข้อมูลตำแหน่ง</h3><p>กรอกทีละตำแหน่งหรือนำเข้าจากเทมเพลตด้วยโครงสร้างเดียวกัน</p></div></li>
+          <li class="reveal"><span>2</span><div><h3>เชื่อม Business Context</h3><p>นำบริบทธุรกิจและ Competency ขององค์กรมาใช้ประกอบการสร้างร่าง</p></div></li>
+          <li class="reveal"><span>3</span><div><h3>AI ช่วยสร้างร่าง</h3><p>สร้างเนื้อหาตามหัวข้อมาตรฐาน และสร้างใหม่ได้เป็นรายส่วน</p></div></li>
+          <li class="reveal"><span>4</span><div><h3>Human review และส่งออก</h3><p>ผู้ใช้เลือก ตรวจ แก้ไข ดู Preview และสร้าง Google Docs ที่แก้ต่อได้</p></div></li>
         </ol>
       </div>
     </section>
@@ -204,15 +281,15 @@
         <div class="trust-copy reveal">
           <p class="eyebrow">การใช้งาน AI อย่างรับผิดชอบ</p>
           <h2 id="trust-title">
-            <span class="trust-title-line">AI ช่วยสร้างร่างแรก</span>
+            <span class="trust-title-line">AI ช่วยร่าง</span>
             <span class="trust-title-line">มนุษย์เป็นผู้ตรวจ</span>
-            <span class="trust-title-line">และนำไปใช้งานให้ถูกต้อง</span>
+            <span class="trust-title-line">แก้ไข และตัดสินใจ</span>
           </h2>
         </div>
         <div class="trust-points reveal">
-          <p>ระบบช่วยจัดโครงสร้างและเสนอเนื้อหาร่างแรกจากข้อมูลที่ผู้ใช้ให้</p>
-          <p>ผู้ใช้ตรวจทาน แก้ไข และยืนยันก่อนสร้างเอกสาร</p>
-          <p>ผู้ใช้รับผิดชอบความถูกต้อง ความเหมาะสม และการนำ JD ไปใช้งาน</p>
+          <p>AI ช่วยจัดโครงสร้างและเสนอเนื้อหาร่างจากข้อมูลที่ผู้ใช้ให้</p>
+          <p>ผู้ใช้เลือก ตรวจ แก้ไข และยืนยันก่อนสร้างเอกสารทุกครั้ง</p>
+          <p>ระบบไม่ตัดสินใจด้านการจ้างงาน ค่าตอบแทน การเลิกจ้าง หรือ Job Evaluation แทนผู้ใช้</p>
         </div>
       </div>
     </section>
@@ -221,11 +298,11 @@
       <div class="section-shell contact-layout reveal">
         <div>
           <p class="eyebrow">GET STARTED</p>
-          <h2 id="contact-title">ต้องการทดลองใช้<br>หรือสอบถามสำหรับองค์กร</h2>
-          <p>ส่งรายละเอียดผ่านแบบฟอร์ม ผู้ดูแลระบบจะติดต่อกลับตามข้อมูลที่ให้ไว้</p>
+          <h2 id="contact-title">ทดลองกับตำแหน่งจริง<br>ขององค์กรคุณ</h2>
+          <p>ขอ Demo ตั้งแต่รับข้อมูล สร้างร่าง ตรวจแก้ ไปจนถึง Google Docs ที่พร้อมนำไปใช้ต่อ</p>
         </div>
         <div class="contact-actions">
-          <button class="button button-primary button-large" type="button" data-open-contact>ติดต่อผู้ดูแลระบบ</button>
+          <button class="button button-primary button-large" type="button" data-open-contact>ขอ Demo JD Builder</button>
           <a class="button button-secondary button-large" data-login-link href="#">มีบัญชีแล้ว เข้าสู่ระบบ</a>
         </div>
       </div>
