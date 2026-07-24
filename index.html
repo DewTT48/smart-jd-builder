@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="เปลี่ยนข้อมูลตำแหน่งให้เป็น JD ที่พร้อมใช้ ด้วย Workflow ที่เชื่อม Business Context และ Competency พร้อม AI ช่วยร่างและ Human review">
+  <meta name="description" content="เปลี่ยนข้อมูลตำแหน่งให้เป็น JD 19 หมวด พร้อมข้อมูลประกอบ Job Evaluation และแนวทางนำไปใช้ต่อในงาน HR โดยมีมนุษย์ตรวจและยืนยันก่อนใช้งาน">
   <meta name="theme-color" content="#f7f8fb">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="JD Builder — เปลี่ยนข้อมูลตำแหน่ง ให้เป็น JD ที่พร้อมใช้">
-  <meta property="og:description" content="สร้าง JD อย่างเป็นระบบ ด้วย AI ที่ HR ยังควบคุมได้">
+  <meta property="og:title" content="JD Builder — จากข้อมูลตำแหน่ง สู่ JD 19 หมวด">
+  <meta property="og:description" content="มากกว่าเอกสารบรรยายงาน — JD 19 หมวด พร้อมข้อมูลประกอบ Job Evaluation และแนวทางนำไปใช้ต่อในงาน HR">
   <meta property="og:url" content="https://dewtt48.github.io/smart-jd-builder/">
   <meta property="og:image" content="https://dewtt48.github.io/smart-jd-builder/assets/og-jd-builder.png">
-  <meta property="og:image:alt" content="JD Builder — เปลี่ยนข้อมูลตำแหน่ง ให้เป็น JD ที่พร้อมใช้">
-  <title>JD Builder — เปลี่ยนข้อมูลตำแหน่ง ให้เป็น JD ที่พร้อมใช้</title>
+  <meta property="og:image:alt" content="JD Builder — จากข้อมูลตำแหน่งสู่ JD 19 หมวด พร้อม Job Evaluation และแนวทางนำไปใช้ในงาน HR">
+  <title>JD Builder — จากข้อมูลตำแหน่ง สู่ JD 19 หมวด</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fbf'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='white'%3EJD%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="assets/fonts/ibm-plex-sans-thai-thai-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/ibm-plex-sans-thai-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -32,7 +32,7 @@
       </a>
       <nav class="desktop-nav" aria-label="เมนูหลัก">
         <a href="#benefits">ประโยชน์</a>
-        <a href="#product">ระบบทำงานอย่างไร</a>
+        <a href="#transformation">ระบบทำงานอย่างไร</a>
         <a href="#trust">การใช้งานอย่างรับผิดชอบ</a>
       </nav>
       <div class="nav-actions">
@@ -45,7 +45,7 @@
     </div>
     <div class="mobile-nav" data-mobile-nav>
       <a href="#benefits">ประโยชน์</a>
-      <a href="#product">ระบบทำงานอย่างไร</a>
+      <a href="#transformation">ระบบทำงานอย่างไร</a>
       <a href="#trust">การใช้งานอย่างรับผิดชอบ</a>
       <button type="button" data-open-contact>ติดต่อผู้ดูแล</button>
       <a data-login-link href="#">เข้าสู่ระบบ</a>
@@ -114,7 +114,7 @@
       <div class="section-shell">
         <div class="section-intro reveal">
           <p class="eyebrow">FROM INPUT TO USABLE JD</p>
-          <h2 id="benefits-title">JD ที่เป็นมาตรฐาน<br>เริ่มจาก Workflow ที่เป็นระบบ</h2>
+          <h2 id="benefits-title">JD ที่เป็นมาตรฐาน เริ่มจาก Workflow ที่เป็นระบบ</h2>
           <p>ลดการเริ่มใหม่จากเอกสารเก่าและข้อมูลกระจัดกระจาย พร้อมรักษาบริบทขององค์กรไว้ในทุกตำแหน่ง</p>
         </div>
         <div class="benefit-grid">
@@ -146,7 +146,7 @@
       <div class="section-shell difference-layout reveal">
         <div class="difference-copy">
           <p class="eyebrow">MORE THAN AI TEXT</p>
-          <h2 id="difference-title">ไม่ใช่แค่ให้ AI<br>เขียนข้อความ</h2>
+          <h2 id="difference-title">ไม่ใช่แค่ให้ AI เขียนข้อความ</h2>
           <p>JD Builder ออกแบบมาเพื่อจัดกระบวนการทำ JD ตั้งแต่ข้อมูลต้นทาง ไปจนถึงเอกสารที่ทีม HR ตรวจสอบและนำไปใช้ต่อได้จริง</p>
         </div>
         <div class="difference-compare">
@@ -160,6 +160,102 @@
             <strong>Input → Context → AI → Review → Docs</strong>
             <p>ทุกขั้นเชื่อมต่อกัน และ HR ยังควบคุมเนื้อหาก่อนนำไปใช้งาน</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section transformation-section" id="transformation" aria-labelledby="transformation-title">
+      <div class="section-shell">
+        <div class="transformation-heading reveal">
+          <div>
+            <p class="eyebrow">FROM REAL INPUT TO HR-READY JD</p>
+            <h2 id="transformation-title">ให้ข้อมูลตำแหน่งที่คุณมี ได้กลับมามากกว่าคำบรรยายงาน</h2>
+          </div>
+          <p>ตัวอย่างจากตำแหน่ง Account Executive ระบบเชื่อมข้อมูลตำแหน่ง บริบทธุรกิจ และ Competency ให้เป็นเอกสารที่พร้อมตรวจและนำไปใช้ต่อ</p>
+        </div>
+
+        <div class="transformation-flow reveal">
+          <article class="input-example" aria-labelledby="input-example-title">
+            <div class="example-label">
+              <span>01</span>
+              <div>
+                <small>ข้อมูลที่ผู้ใช้กรอก</small>
+                <h3 id="input-example-title">Account Executive</h3>
+              </div>
+            </div>
+            <div class="input-field">
+              <small>เหตุผลที่ต้องมีตำแหน่งนี้</small>
+              <p>ดูแลการขายและประสานงานกับลูกค้า เพื่อสร้างโอกาสทางธุรกิจและสนับสนุนยอดขายของบริษัท</p>
+            </div>
+            <div class="input-field">
+              <small>งานหลักที่รับผิดชอบ</small>
+              <p>ติดต่อ Prospect ติดตามลูกค้า จัดทำใบเสนอราคา ประสานงานทีมที่ปรึกษา และอัปเดต Sales Pipeline</p>
+            </div>
+            <div class="input-field">
+              <small>ผลลัพธ์ที่ต้องส่งมอบ</small>
+              <p>รายงาน Pipeline ใบเสนอราคา นัดหมายลูกค้า และข้อมูลลูกค้าที่เป็นปัจจุบัน</p>
+            </div>
+            <div class="input-field">
+              <small>ตัวชี้วัดความสำเร็จ</small>
+              <p>จำนวน Lead มูลค่า Pipeline อัตราปิดการขาย และความเร็วในการตอบลูกค้า</p>
+            </div>
+          </article>
+
+          <div class="transformation-bridge" aria-hidden="true">
+            <span>AI ช่วยจัดโครงสร้าง</span>
+            <b>→</b>
+            <small>Human review</small>
+          </div>
+
+          <article class="output-example" aria-labelledby="output-example-title">
+            <div class="example-label output-label">
+              <span>02</span>
+              <div>
+                <small>สิ่งที่ระบบจัดทำให้</small>
+                <h3 id="output-example-title">JD 19 หมวด</h3>
+              </div>
+              <em>พร้อมตรวจและแก้ไข</em>
+            </div>
+
+            <div class="output-primary">
+              <p class="output-kicker">JOB DESCRIPTION</p>
+              <h4>รายละเอียดงานที่เชื่อมกับธุรกิจ</h4>
+              <div class="output-tags" aria-label="ตัวอย่างองค์ประกอบใน JD">
+                <span>วัตถุประสงค์ของตำแหน่ง</span>
+                <span>ความเชื่อมโยงกับธุรกิจ</span>
+                <span>ความรับผิดชอบและผลลัพธ์</span>
+                <span>KPI และเกณฑ์ความสำเร็จ</span>
+                <span>Competency</span>
+                <span>บริบทและสภาพการทำงาน</span>
+              </div>
+            </div>
+
+            <div class="output-extension-grid">
+              <section class="output-extension">
+                <div class="extension-icon" aria-hidden="true">JE</div>
+                <div>
+                  <p class="output-kicker">JOB EVALUATION INPUT</p>
+                  <h4>ข้อมูลประกอบการประเมินค่างาน</h4>
+                  <p>สรุป Knowledge, Problem Solving, Business Impact, Decision Authority, People Leadership และ Stakeholder Complexity เพื่อใช้ประกอบการพิจารณาโดยผู้เชี่ยวชาญ</p>
+                </div>
+              </section>
+              <section class="output-extension">
+                <div class="extension-icon" aria-hidden="true">HR</div>
+                <div>
+                  <p class="output-kicker">HR APPLICATION GUIDE</p>
+                  <h4>แนวทางนำไปใช้ต่อในงาน HR</h4>
+                  <div class="hr-use-list">
+                    <span>Recruitment &amp; Selection</span>
+                    <span>Performance Management</span>
+                    <span>Learning &amp; Development</span>
+                    <span>Job Evaluation</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <p class="output-note"><span aria-hidden="true">✓</span> AI ช่วยจัดโครงสร้าง — HR ตรวจ แก้ไข และยืนยันก่อนนำไปใช้จริง</p>
+          </article>
         </div>
       </div>
     </section>
@@ -184,8 +280,8 @@
           <div id="panel-workspace" class="product-panel is-active" role="tabpanel" aria-labelledby="tab-workspace" data-panel="workspace">
             <div class="product-copy">
               <p class="product-kicker">DOCUMENT PREVIEW</p>
-              <h3>อ่านง่ายเหมือนเอกสารจริง ก่อนส่งออก</h3>
-              <p>ตรวจโครงสร้าง หัวข้อ และตารางในรูปแบบใกล้เคียง Google Docs ก่อนสร้างเอกสารใช้งาน</p>
+              <h3>เห็น JD 19 หมวดในรูปแบบเอกสารจริงก่อนส่งออก</h3>
+              <p>ตรวจตั้งแต่ความเชื่อมโยงกับธุรกิจ ตารางความรับผิดชอบ ไปจนถึงข้อมูลประกอบ Job Evaluation และคำแนะนำการนำไปใช้ในงาน HR</p>
             </div>
             <figure class="product-visual">
               <div class="ui-shot ui-document" role="img" aria-label="ตัวอย่าง Document Preview ของตำแหน่ง Account Executive">
@@ -196,12 +292,16 @@
                   <p class="ui-meta">Sales / Business Development · รายงานตรงต่อ Sales Manager</p>
                   <div class="ui-rule"></div>
                   <h5>1. วัตถุประสงค์ของตำแหน่ง</h5>
-                  <p>สร้างและรักษาความสัมพันธ์กับลูกค้า นำเสนอโซลูชัน และสนับสนุนเป้าหมายการขายขององค์กร</p>
+                  <p>รับผิดชอบในการสร้างและรักษาความสัมพันธ์กับลูกค้า เพื่อนำเสนอโซลูชันและสนับสนุนการเติบโตของธุรกิจอย่างยั่งยืน</p>
+                  <h5>2. ความเชื่อมโยงกับธุรกิจ</h5>
+                  <p>เป็นด่านหน้าในการสร้างโอกาสทางธุรกิจ ติดตามลูกค้า และสนับสนุนการบรรลุเป้าหมายการขายขององค์กร</p>
                   <h5>3. ความรับผิดชอบหลัก</h5>
                   <div class="ui-doc-table">
                     <div class="ui-doc-head"><span>ลำดับ</span><span>ความรับผิดชอบหลัก</span><span>รายละเอียด</span><span>ผลลัพธ์ที่คาดหวัง</span></div>
-                    <div class="ui-doc-row"><span>1</span><span>บริหารเป้าหมายการขาย</span><span>ติดตามโอกาสและข้อมูลลูกค้า</span><span>ยอดขายตามเป้าหมาย</span></div>
-                    <div class="ui-doc-row"><span>2</span><span>ดูแลความสัมพันธ์ลูกค้า</span><span>ประสานงานและติดตามต่อเนื่อง</span><span>ลูกค้าได้รับการดูแล</span></div>
+                    <div class="ui-doc-row"><span>1</span><span>การบรรลุเป้าหมายการขาย</span><span>บรรลุเป้าหมายยอดขายและขยายฐานลูกค้า</span><span>ยอดขายและลูกค้าใหม่ตามเป้าหมาย</span></div>
+                    <div class="ui-doc-row"><span>2</span><span>การบริหารความสัมพันธ์ลูกค้า</span><span>ดูแล Prospect และลูกค้าปัจจุบันอย่างต่อเนื่อง</span><span>ความสัมพันธ์ที่ดีและลูกค้าพึงพอใจ</span></div>
+                    <div class="ui-doc-row"><span>3</span><span>การจัดการ Sales Pipeline</span><span>อัปเดตข้อมูลการขายให้เป็นปัจจุบันและวิเคราะห์ได้</span><span>Pipeline ที่ถูกต้องและรายงานพร้อมใช้</span></div>
+                    <div class="ui-doc-row"><span>4</span><span>การประสานงานภายใน</span><span>ส่งต่อข้อมูลและประสานทีมที่ปรึกษาและ Delivery</span><span>ส่งมอบบริการได้ราบรื่น</span></div>
                   </div>
                 </div>
               </div>
@@ -251,7 +351,7 @@
                   <div class="ui-batch-head"><span>ตำแหน่ง</span><span>หน่วยงาน</span><span>สถานะ</span><span></span></div>
                   <div><strong>Marketing Coordinator</strong><span>Marketing</span><em>รอดำเนินการ</em><span class="ui-button">เลือก</span></div>
                   <div><strong>IT Support Specialist</strong><span>Information Technology</span><em>นำเข้าแล้ว</em><span class="ui-button">เปิด Workspace</span></div>
-                  <div><strong>Finance Officer</strong><span>Finance & Accounting</span><em>รอดำเนินการ</em><span class="ui-button">เลือก</span></div>
+                  <div><strong>Finance Officer</strong><span>Finance &amp; Accounting</span><em>รอดำเนินการ</em><span class="ui-button">เลือก</span></div>
                 </div>
               </div>
             </figure>
@@ -264,7 +364,7 @@
       <div class="section-shell process-layout">
         <div class="process-copy reveal">
           <p class="eyebrow">A CLEAR PROCESS</p>
-          <h2 id="process-title">จากข้อมูลตำแหน่ง<br>สู่เอกสารที่พร้อมใช้</h2>
+          <h2 id="process-title">จากข้อมูลตำแหน่ง สู่เอกสารที่พร้อมใช้</h2>
           <p>ระบบช่วยจัดกระบวนการและสร้างร่าง โดยผู้ใช้ยังควบคุมเนื้อหาทุกขั้นตอน</p>
         </div>
         <ol class="process-list">
@@ -298,7 +398,7 @@
       <div class="section-shell contact-layout reveal">
         <div>
           <p class="eyebrow">GET STARTED</p>
-          <h2 id="contact-title">ทดลองกับตำแหน่งจริง<br>ขององค์กรคุณ</h2>
+          <h2 id="contact-title">ทดลองกับตำแหน่งจริงขององค์กรคุณ</h2>
           <p>ขอ Demo ตั้งแต่รับข้อมูล สร้างร่าง ตรวจแก้ ไปจนถึง Google Docs ที่พร้อมนำไปใช้ต่อ</p>
         </div>
         <div class="contact-actions">
